@@ -10,6 +10,6 @@ class FiguresController < ApplicationController
   end
 
   get '/figures/:id' do
-    erb :'figures/edit'
+    erb :'figures/show'
   end
 end
