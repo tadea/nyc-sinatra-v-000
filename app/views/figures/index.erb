@@ -1,5 +1,5 @@
 <h2>All Historical Figures</h2>
 
-<% @figures.each do | f | %>
-  <%= f.name %><br>
+<% @figures.each do |figure| %>
+  <a href="/figures/<%= figure.id %>"><%= figure.name %></a>
 <% end %>
