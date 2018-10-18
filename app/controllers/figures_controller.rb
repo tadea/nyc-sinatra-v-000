@@ -22,7 +22,7 @@ class FiguresController < ApplicationController
     @figure.save
     redirect "/figures/#{@figure.id}"
   end
-  
+
   get '/figures/:id' do
     @figure = Figure.find(params[:id])
     erb :'figures/show'
@@ -30,7 +30,7 @@ class FiguresController < ApplicationController
 
 
   get '/figures/:id/edit' do
-    @figure = Figure.find(params[:id])
+    @figures = Figure.find(params[:id])
     erb :'figures/edit'
   end
 
