@@ -4,8 +4,8 @@
 <label>Name:</label>
 <input type="text" name="figure[name]" id="figure_id">
 
-<h2>Choose existing Titles</h2>
- <% Title.all.each do |title| %>
+<h2>Choose Existing Titles</h2>
+ <% Title.all.each do |title| %><br>
    <input type="checkbox" name="figure[title_ids][]" id="title_<%= title.id %>" value="<%= title.id %>"><%= title.name %></input>
  <% end %>
 
@@ -19,4 +19,4 @@
   <label>Year</label>
   <input type="text" name="landmark[year_completed]" id="landmark_year_completed">
    <input type="submit" value="Create New Figure">
-</form> 
+</form>
