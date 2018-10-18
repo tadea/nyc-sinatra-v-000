@@ -1,9 +1,9 @@
 class FiguresController < ApplicationController
 
   get '/figures' do
-    @figures = Figure.all
-    erb :'figures/index'
-  end
+  @figure = Figure.all
+  erb :'figures/index'
+ end
 
   get '/figures/new' do
     erb :'figures/new'
@@ -26,12 +26,12 @@ class FiguresController < ApplicationController
     redirect "/figures/#{@figure.id}"
   end
 
-   get '/figures/:id/edit' do
+  get '/figures/:id/edit' do
     @figure = Figure.find(params[:id])
     erb :'figures/edit'
   end
-  
-   patch '/figures/:id' do
+
+  patch '/figures/:id' do
     @figure = Figure.find(params[:id])
     @figure.update(params[:figure])
     if !params[:landmark][:name].empty?
