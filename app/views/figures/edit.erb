@@ -1,5 +1,5 @@
 <form action="/figures/<%= @figure.id %>" method="post">
-<input id="hidden" type="hidden" name="_method" value="patch"> 
+<input id="hidden" type="hidden" name="_method" value="patch">
 <h2>Update Figure</h2>
   <input type="text" name="figure[name]" id="figure_name" value="<%= @figure.name %>">
  <h3>Existing Titles</h3>
@@ -16,8 +16,8 @@
 <label>Year</label>
 <input type="text" name="landmark[year_completed]" id="landmark_year_completed">
  <input type="submit" value="Edit Figure">
-</form> 
-     
+</form>
+
 5  app/views/figures/index.erb
 @@ -0,0 +1,5 @@
 <h2>All Historical Figures</h2>
