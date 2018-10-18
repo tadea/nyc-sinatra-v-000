@@ -9,4 +9,7 @@ class FiguresController < ApplicationController
     erb :'figures/new'
   end
 
+  get '/figures/:id' do
+    erb :'figures/edit'
+  end
 end
